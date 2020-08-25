@@ -1,0 +1,23 @@
+<?php 
+
+$col = 0;
+if ( have_posts() ) {
+    if ($col == 0){
+            echo "<div class=\"row\">";
+        }
+	while ( have_posts()) {
+        the_post(); 
+        echo "<div class=\"col-md-3 product-card\">";?>
+        <div class="card" >
+            <?php the_post_thumbnail( 'full', array( 'class' => 'card-img-top' ) ); ?>
+            <div class="card-body">
+                <h3 class="card-title product-title"><?php echo the_title();?></h3>
+                <a href="#" class="btn btn-primary">Περισσότερα</a>
+            </div>
+        </div>
+	<?php	echo "</div>";
+    } // end while
+    echo "</div>";
+} // end if
+
+?>
