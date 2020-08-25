@@ -7,12 +7,12 @@ if ( have_posts() ) {
         }
 	while ( have_posts()) {
         the_post(); 
-        echo "<div class=\"col-md-3 product-card\">";?>
+        echo "<div class=\"col-md-3 product-card\">";?> // This is for 4 post card in a row
         <div class="card" >
             <?php the_post_thumbnail( 'full', array( 'class' => 'card-img-top' ) ); ?>
             <div class="card-body">
-                <h3 class="card-title product-title"><?php echo the_title();?></h3>
-                <a href="#" class="btn btn-primary">Περισσότερα</a>
+                <h3 class="card-title product-title"><?php echo the_title();?></h3> // Post title
+                <a href="#" class="btn btn-primary">More</a> // Button
             </div>
         </div>
 	<?php	echo "</div>";
